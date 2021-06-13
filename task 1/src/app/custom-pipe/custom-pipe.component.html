@@ -1,0 +1,15 @@
+<p><b>Task 3. Creation of custom pipe</b></p>
+
+<p>This custom pipe changes spaces to underscores!</p>
+
+<table border="1" rules="all" cellpadding="5px" cellspacing="5px">
+    <tr>
+        <th>Number before format</th>
+        <th>Number after format</th>
+    </tr>
+    <tr>
+        <td><input [(ngModel)]="anyString" placeholder="Input a string here!"></td>
+        <td>{{ anyString | spaceToUnderline }}</td>
+        
+    </tr>
+</table><br><br>

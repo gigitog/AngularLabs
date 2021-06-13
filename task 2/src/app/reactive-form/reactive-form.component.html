@@ -1,0 +1,47 @@
+
+<div class="container-fluid">
+        <div class="container">
+            <form class="mt-4" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                    <input type="text" class="form-control mb-2 mr-sm-2" name="name" id="name" formControlName="name" placeholder="Name">
+                    <div class="text-danger" *ngIf="myForm.controls.name.hasError('required') && wasSubmitted">Name can not be empty</div><br>
+                    <input type="text" class="form-control mb-2 mr-sm-2" name="surname" id="surname" formControlName="surname" placeholder="Surname">
+                    <div class="text-danger" *ngIf="myForm.controls.surname.hasError('required') && wasSubmitted">Surame can not be empty</div><br>
+                    <input type="text" class="form-control mb-2 mr-sm-2" name="patronymic" id="patronymic" formControlName="patronymic" placeholder="Patronymic"><br>
+                    <div class="text-danger" *ngIf="myForm.controls.patronymic.hasError('required') && wasSubmitted">Patronymic can not be empty</div><br>
+                    <label for="gender">Please select gender</label>
+                    </div><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="male" formControlName="gender" value="male">
+                        <label class="form-check-label" for="inlineRadio1" >Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="female" formControlName="gender" value="female">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="other" formControlName="gender" value="other">
+                        <label class="form-check-label" for="inlineRadio3">Other</label>
+                      </div><br>
+                      <div class="text-danger" *ngIf="myForm.controls.gender.hasError('required') && wasSubmitted">Gender is required</div><br><br><br>
+                        <input type="text" class="form-control mb-2 mr-sm-2" name="email" id="email" formControlName="email" formControlName="email" placeholder="Email">
+                        <div class="text-danger" *ngIf="myForm.controls.email.hasError('required') && wasSubmitted">Email can not be empty<br></div><br>
+                        <div class="text-danger" *ngIf="myForm.controls.email.hasError('email') && wasSubmitted">Please enter the valid email<br></div>
+                        <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" placeholder="Password"><br>
+                        <div class="text-danger" *ngIf="myForm.controls.password.hasError('required') && wasSubmitted">Password can not be empty</div><br>
+                        <div class="form-group"></div><br>
+                            <label for="exampleFormControlSelect2">How did you know about us?</label><br><br>
+                            <select multiple class="form-control" formControlName="ads" id="exampleFormControlSelect2">
+                              <option value="internet">Internet</option>
+                              <option value="tv">Television</option>
+                              <option value="outdoor">Outdoor advertising</option>
+                              <option value="friends">Friends or family</option>
+                              <option value="other">Other option</option>
+                            </select>
+                            <div class="text-danger" *ngIf="myForm.controls.ads.hasError('required') && wasSubmitted">Please answer the question</div><br>
+                        </div><br>
+                        <button>Confirm</button>
+            </form>
+        </div>
+    </div>

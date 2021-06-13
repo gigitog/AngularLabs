@@ -1,0 +1,25 @@
+<div>
+    <b>1.1 Built-in pipes in Angular </b><br><br>
+    1) DatePipe: formats the date: <br><br>
+    <button (click)="getDate()"> Get current date!</button><br><br>
+    <table border="1" rules="all" cellpadding="5px" cellspacing="5px">
+    <tr>
+        <th>Date before format</th>
+        <th>Date after format</th>
+    </tr>
+    <tr>
+        <td>{{ currentDate }}</td>
+        <td>{{ currentDate | date: 'yyyy-MM-dd'}}</td>
+    </tr>
+</table><br><br>
+    2) LowerCasePipe: turns a string into lower case: <br><br>
+    <input [(ngModel)]="inputText" placeholder="Input a string here!"><br><br>
+    Result: <b>{{ inputText | lowercase}}</b><br><br>
+    3) CurrencyPipe: formats the currency <br><br>
+    <input [(ngModel)]="inputCurrency" placeholder="Any currency here"><br><br>
+    Result: <b>{{ inputCurrency | currency:'UAH':'symbol-narrow':'1.2-2'}}</b><br><br>
+    4) SlicePipe: slices the string <br><br>
+    <input [(ngModel)]="slicedString" placeholder="Any string here"><br><br>
+    Result (characters from 0 to 4): <b>{{ slicedString | slice:0:4}}</b><br><br>
+</div>
+

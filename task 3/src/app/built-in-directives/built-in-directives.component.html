@@ -1,0 +1,24 @@
+<div>
+    <h2>6) Built-in directives in Angular:</h2> 
+    <h3>I. ngIf directive:</h3>
+        As long as the checkbox is "true", you can see the image: 
+        <input type="checkbox" [(ngModel)]="show"><br><br>
+        <img *ngIf="show" src='assets/images/img1.jpg' width="300" height="201"><br>
+        <h3>II. ngFor directive:</h3>
+        <table>
+            <tr><th>Firstname</th><th>Lastname</th></tr>
+            <tr *ngFor="let user of users">
+                <td>{{ user.firtsName }}</td><td>{{ user.lastName}} </td>
+            </tr>
+        </table>
+        <h3>III. nGclass directive:</h3>
+        Upprer Text - Blue & isArial: <input type="checkbox" [(ngModel)]="isArial"><br>
+        Bottom Text - Red & isVerdana: <input type="checkbox" [(ngModel)]="isVerdana"><br>
+        <div [ngClass]="{arialFont:isArial}">
+            <h1>The upper text</h1>
+        </div>
+        <div [ngClass]="{verdanaFont:isVerdana}">
+            <h4>Bottom text</h4>
+        </div>
+    <p>
+</div>

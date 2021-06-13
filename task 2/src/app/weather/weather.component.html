@@ -1,0 +1,92 @@
+<div class="container-fluid">
+
+    <h1>Please select your city </h1>
+    
+    <div class="btn-group" role="group" aria-label="City buttons">
+        <button type="button" class="btn btn-secondary" (click)="updateWeatherData('odesa')">Odesa</button>
+        <button type="button" class="btn btn-secondary" (click)="updateWeatherData('kyiv')">Kyiv</button>
+        <button type="button" class="btn btn-secondary" (click)="updateWeatherData('newyork')">New-York</button>
+        <button type="button" class="btn btn-secondary" (click)="updateWeatherData('berlin')">Berlin</button>
+        <button type="button" class="btn btn-secondary" (click)="updateWeatherData('paris')">Paris</button>
+        <button type="button" class="btn btn-secondary" (click)="updateWeatherData('madrid')">Madrid</button>
+      </div>
+    
+<div class="card-group">
+    <div class="card  bg-dark text-white text-center" >
+        <div>
+            <h1 class="card-title">{{ (this.weatherData[0].temp.day) }} °C</h1>
+        </div>
+         <div class="card-body">
+             <h5 class="card-title">{{ this.weatherData[0].dt | date }}</h5>
+             <p  class="card-text">{{ this.weatherData[0].weather[0].description }}</p>
+             <p  class="card-text">Feels like: {{ this.weatherData[0].feels_like.day }} °C</p>
+             <p  class="card-text">Humidity: {{ this.weatherData[0].humidity }} %</p>
+          </div>
+      </div>
+    <div class="card  bg-dark text-white text-center" >
+        <h1 class="card-title">{{ (this.weatherData[1].temp.day) }} °C</h1>
+         <div class="card-body">
+             <h5 class="card-title">{{ this.weatherData[1].dt | date  }}</h5>
+             <p  class="card-text">{{ this.weatherData[1].weather[0].description }}</p>
+             <p  class="card-text">Feels like: {{ this.weatherData[1].feels_like.day }} °C</p>
+             <p  class="card-text">Humidity: {{ this.weatherData[1].humidity }} %</p>
+          </div>
+      </div>
+    <div class="card  bg-dark text-white text-center" >
+        <h1 class="card-title">{{ (this.weatherData[2].temp.day) }} °C</h1>
+         <div class="card-body">
+             <h5 class="card-title">{{ this.weatherData[2].dt | date }}</h5>
+             <p  class="card-text">{{ this.weatherData[2].weather[0].description }}</p>
+             <p  class="card-text">Feels like: {{ this.weatherData[2].feels_like.day }} °C</p>
+             <p  class="card-text">Humidity: {{ this.weatherData[2].humidity }} %</p>
+          </div>
+      </div>
+      <div class="card  bg-dark text-white text-center" >
+        <h1 class="card-title">{{ (this.weatherData[3].temp.day) }} °C</h1>
+       <div class="card-body">
+           <h5 class="card-title">{{ this.weatherData[3].dt | date}}</h5>
+           <p  class="card-text">{{ this.weatherData[3].weather[0].description }}</p>
+           <p  class="card-text">Feels like: {{ this.weatherData[3].feels_like.day }} °C</p>
+           <p  class="card-text">Humidity: {{ this.weatherData[3].humidity }} %</p>
+        </div>
+    </div>
+    </div>
+    <div class="card-group">
+        <div class="card  bg-dark text-white text-center" >
+            <h1 class="card-title">{{ (this.weatherData[4].temp.day) }} °C</h1>
+             <div class="card-body">
+                 <h5 class="card-title">{{ this.weatherData[4].dt | date }}</h5>
+                 <p  class="card-text">{{ this.weatherData[4].weather[0].description }}</p>
+                 <p  class="card-text">Feels like: {{ this.weatherData[4].feels_like.day }} °C</p>
+                 <p  class="card-text">Humidity: {{ this.weatherData[4].humidity }} %</p>
+              </div>
+          </div>
+        <div class="card  bg-dark text-white text-center" >
+            <h1 class="card-title">{{ (this.weatherData[5].temp.day) }} °C</h1>
+             <div class="card-body">
+                 <h5 class="card-title">{{ this.weatherData[5].dt | date }}</h5>
+                 <p  class="card-text">{{ this.weatherData[5].weather[0].description }}</p>
+                 <p  class="card-text">Feels like: {{ this.weatherData[5].feels_like.day }} °C</p>
+                 <p  class="card-text">Humidity: {{ this.weatherData[5].humidity }} %</p>
+              </div>
+          </div>
+        <div class="card  bg-dark text-white text-center" >
+            <h1 class="card-title">{{ (this.weatherData[6].temp.day)  }} °C</h1>
+             <div class="card-body">
+                 <h5 class="card-title">{{ this.weatherData[6].dt | date }}</h5>
+                 <p  class="card-text">{{ this.weatherData[6].weather[0].description }}</p>
+                 <p  class="card-text">Feels like: {{ this.weatherData[6].feels_like.day }} °C</p>
+                 <p  class="card-text">Humidity: {{ this.weatherData[6].humidity }} %</p>
+              </div>
+          </div>
+          <div class="card  bg-dark text-white text-center" >
+            <h1 class="card-title">{{ (this.weatherData[7].temp.day)  }} °C</h1>
+           <div class="card-body">
+               <h5 class="card-title">{{ this.weatherData[7].dt | date }}</h5>
+               <p  class="card-text">{{ this.weatherData[7].weather[0].description }}</p>
+               <p  class="card-text">Feels like: {{ this.weatherData[7].feels_like.day }} °C</p>
+               <p  class="card-text">Humidity: {{ this.weatherData[7].humidity }} %</p>
+            </div>
+        </div>
+        </div>
+    </div>

@@ -1,0 +1,16 @@
+<div class="cn"> 
+    <div class="progress-wrap">
+        <h1>Bootstrap progessbar component</h1>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width': barValue}"></div>
+        </div>
+        <table cellpadding="25">
+            <tr>
+                <td><button (click)="increment()" type="button" class="btn btn-dark">+</button></td>
+                <td><button (click)="decrement()" type="button" class="btn btn-dark">-</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+

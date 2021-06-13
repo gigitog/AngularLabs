@@ -1,0 +1,32 @@
+<div>
+    <b>Task 2. Other tasks with components in Angular:</b><br><br>
+    1) "ng-content" usage:
+    <app-parent></app-parent><br>
+    2) "ng-template" and "ng-container" usage: <br><br>
+    <input type="checkbox" [(ngModel)]="isClicked"><br><br>
+    
+    <div *ngIf="isClicked; else notClicked">
+        <h3>The checkbox is clicked!</h3>
+    </div>
+
+    <ng-template #notClicked>
+        <h3>Click on the checkbox to see the text!</h3>
+    </ng-template>
+
+    <app-ng-template-example [exampleTemplate]="exampleTemplate"></app-ng-template-example>
+
+    <ng-template #exampleTemplate>
+        <h4>This text is set here with the help of "ng-template" and "ng-container"</h4>
+    </ng-template>
+
+    <ng-container *ngTemplateOutlet="exampleTemplate"></ng-container> <br>
+
+    3) Template variables and ViewChild decorator usage:
+    <app-view-child-example></app-view-child-example> <br>
+
+    <button (click)="summarize()">+</button>
+    <button (click)="substract()">-</button>
+    <button (click)="multiply()">*</button>
+    <button (click)="divide()">/</button>
+
+</div>

@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <ngx-datatable
+        class="mt-4 material"
+        [rows]="orders"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="75"
+        [limit]="10">
+        
+        <ngx-datatable-column name="Name" [width]="300">
+            <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+                <strong>{{ row.name }}</strong>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Category" [width]="300">
+            <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+                <strong>{{ row.category}}</strong>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Price" [width]="300">
+            <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+                <strong>{{ row.price }}</strong>
+            </ng-template>
+        </ngx-datatable-column>
+
+    </ngx-datatable>
+</div>
